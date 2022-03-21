@@ -26,10 +26,8 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+
 // app.use(express.static(path.join(__dirname, "public", "react-quotation"))); 
-
-
 
 // Plug routers
 app.use('/', indexRouter);
@@ -43,6 +41,7 @@ app.use(function(req, res, next) {
   next(createError(404));
 });
 
+app.use(express.static(path.join(__dirname, 'public')));
 app.get("/*", function (req, res) { 
   res.sendFile(path.join(__dirname, "public", "index.html")); 
 
