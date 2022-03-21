@@ -17,7 +17,6 @@ var quotationRouter = require('./routes/quotation');
 var app = express();
 app.use(cors());
 
-
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
@@ -26,7 +25,8 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+// app.use(express.static(path.join(__dirname, 'public')));
+
 
 // Plug routers
 app.use('/', indexRouter);
@@ -37,10 +37,11 @@ app.use('/quotations',quotationRouter);
 
 app.use(express.static(path.join(__dirname, "public", "react-quotation"))); 
 
-app.get("/", function (req, res) { 
+app.get("/*", function (req, res) { 
   res.sendFile(path.join(__dirname, "public","react-quotation", "index.html")); 
 
-}); 
+});
+ 
 
 
 // catch 404 and forward to error handler
