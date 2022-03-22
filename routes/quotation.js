@@ -20,7 +20,7 @@ router.get("/", (req, res, next) => {
 router.post("/", (req, res, next) => {
   console.debug(req.body);
   const data = req.body;
-  const dateObj = new Date().toDateString();
+  const dateObj = new Date().toLocaleString();
 
   const newQuotation = new Quotation({
     item: data.item,
