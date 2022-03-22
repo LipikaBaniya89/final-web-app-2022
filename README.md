@@ -2,7 +2,7 @@
 
 ## Lipika Baniya , 6138108
 
-## Project details
+## Project detail
 > Company Quotation website where user can add their desired product to the product management table. After adding product user can see the option added to the quotation table where user can choose the product from dropdown and add to the Quotation Management Table where the items will be listed according to the data creation, details of items like Item name, price, amount will also be displayed to the user. 
 
 ## Functionality of code
