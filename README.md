@@ -18,6 +18,6 @@
  
  > Quotation Management
  -  Date of Creation: Latest Items is displayed to the user
- - Delete: User can delete the item (refresh required)
+ - Delete: User can delete the item 
  - Link : User can click on Add Product button which will direct the user to Quotation Page 
  - Amount : Total amount of each product and sum of amount of all product's total amount is displayed 
